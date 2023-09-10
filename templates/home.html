@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-to-csv</title>
+</head>
+<body>
+    <h1>Text Input Form</h1>
+    <form action="{{url_for('process')}}" method="POST">   <!-- url_for build the url dymanically in runtime-->
+        <label for="input_text">Enter Text:</label>
+        <input type="text" id="input_text" name="input_text">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

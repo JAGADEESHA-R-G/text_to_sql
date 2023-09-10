@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>results</title>
+</head>
+<body>
+    
+    <h3>Sample data</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>{{ data[0][0] }}</th>
+                <th>{{ data[0][1] }}</th>
+                <th>{{ data[0][2] }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data[1:] %}
+            <tr>
+                <td>{{ item[0] }}</td>
+                <td>{{ item[1] }}</td>
+                <td>{{ item[2] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    </br>
+    <a href="{{ url_for('download_result') }}">download_complete_data</a>
+    </br>
+    </br>
+    </br>
+    <p>If you want to data for your specific columns click here <a href="{{ url_for('custom_page') }}">custom columns</a></p>
+</body>
+</html>
